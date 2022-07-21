@@ -13,3 +13,8 @@ test('renders 3 list items', () => {
   const listItems = screen.getAllByRole('listitem');
   expect(listItems).toHaveLength(3); //toBe, toEqual
 });
+test('renders title', () => {
+  render(<App />);
+  const title = screen.getByTestId('testid1');
+  expect(title).toBeInTheDocument();
+});
