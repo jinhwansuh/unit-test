@@ -18,3 +18,8 @@ test('renders title', () => {
   const title = screen.getByTestId('testid1');
   expect(title).toBeInTheDocument();
 });
+test('sum should be 5', () => {
+  render(<App />);
+  const sum = screen.getByTitle('sum');
+  expect(sum.textContent).toBe('5');
+});
